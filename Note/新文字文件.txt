@@ -1,0 +1,55 @@
+//‘ªŽŽ
+        Thread thread = new Thread() {
+            public void run(){
+
+
+        InputStream is = null;
+        String result = "";
+        String url = "http://183.181.20.96/myFirstHomePage/Hangman/QusetionServlet.do";
+        JSONObject jArray = null;
+
+        try {
+            HttpClient httpclient = new DefaultHttpClient();
+            HttpPost httppost = new HttpPost(url);
+
+            List<NameValuePair> params = new ArrayList<NameValuePair>();
+            params.add(new BasicNameValuePair("action", "QuestionCheck"));
+            UrlEncodedFormEntity ent = new UrlEncodedFormEntity(params, HTTP.UTF_8);
+            httppost.setEntity(ent);
+
+            HttpResponse response = httpclient.execute(httppost);
+            HttpEntity entity = response.getEntity();
+            is = entity.getContent();
+
+            } catch (Exception e) {
+            Log.e("log_tag", "Error in http connection " + e.toString());
+        }
+
+
+        try {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(
+//                    is, "iso-8859-1"), 8);
+                    is, "UTF-8"), 8);
+            StringBuilder sb = new StringBuilder();
+            String line = null;
+            while ((line = reader.readLine()) != null) {
+                sb.append(line + "\n");
+                Log.e("line",line);
+            }
+            is.close();
+            result = sb.toString();
+        } catch (Exception e) {
+            Log.e("log_tag", "Error converting result " + e.toString());
+        }
+
+        Log.e("****************","****************");
+        Log.e("****************",result);
+
+
+
+
+
+            }
+        };
+
+        thread.start();

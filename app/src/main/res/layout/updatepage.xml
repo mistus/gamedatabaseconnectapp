@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <Button
+        android:layout_width="125dp"
+        android:layout_height="60dp"
+        android:text="OK"
+        android:id="@+id/okButton"
+        android:layout_marginLeft="43dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="250dp" />
+
+    <Button
+        android:layout_width="125dp"
+        android:layout_height="60dp"
+        android:text="cancel"
+        android:id="@+id/cancelButton"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="250dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="英文"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="90dp"   />
+
+    <EditText
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/questionEdit"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="40dp"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="中文"
+        android:layout_marginLeft="255dp"
+        android:layout_marginTop="50dp"/>
+
+    <EditText
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/answerEdit"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="205dp"
+        android:gravity="center" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="正確數"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="80dp"
+        android:layout_alignParentTop="true"
+        />
+
+    <EditText
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/correctEdit"
+        android:layout_marginTop="170dp"
+        android:layout_marginLeft="40dp"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="錯誤數"
+        android:layout_marginLeft="245dp"
+        android:layout_marginTop="150dp" />
+
+    <EditText
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/wrongEdit"
+        android:layout_marginTop="170dp"
+        android:layout_marginLeft="205dp"
+        android:gravity="center" />
+
+</RelativeLayout>
